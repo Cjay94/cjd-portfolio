@@ -81,6 +81,7 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg"],
     linkSite: "https://cjd-hilink.vercel.app/",
     linkGH: "https://github.com/Cjay94/cjd-hilink",
+    pinTitle: "HiLink Travel",
   },
   {
     id: 2,
@@ -90,6 +91,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/gsap.svg"],
     linkSite: "https://cjay94.github.io/cjd-awwward/",
     linkGH: "https://github.com/Cjay94/cjd-awwward",
+    pinTitle: "Awwwards",
   },
   {
     id: 3,
@@ -99,6 +101,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/gsap.svg", "/three.svg"],
     linkSite: "https://cjay94.github.io/cjd-apple-iphone/",
     linkGH: "https://github.com/Cjay94/cjd-apple-iphone",
+    pinTitle: "Apple Iphone 15 pro",
   },
   {
     id: 4,
@@ -108,6 +111,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg", "/three.svg", "/gsap.svg"],
     linkSite: "https://cjay94.github.io/cjd-brainwave/",
     linkGH: "https://github.com/Cjay94/cjd-brainwave",
+    pinTitle: "BrainWave",
   },
 
   {
@@ -118,6 +122,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg"],
     linkSite: "https://cjay94.github.io/cjd-gericht/",
     linkGH: "https://github.com/Cjay94/cjd-gericht",
+    pinTitle: "Gericht",
   },
 
   {
@@ -128,6 +133,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/fm.svg", "/three.svg", "/gsap.svg"],
     linkSite: "https://cjay94.github.io/cjd-xora/",
     linkGH: "https://github.com/Cjay94/cjd-xora",
+    pinTitle: "Xora",
   },
 ];
 

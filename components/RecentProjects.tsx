@@ -22,8 +22,8 @@ const RecentProjects = () => {
             className="flex items-center justify-center w-[80vw] sm:w-[570px] h-[32rem] sm:h-[41rem] lg:min-h-[32.5rem]"
           >
             <PinContainer
-              title={item.link}
-              href={item.link}
+              title={item.pinTitle}
+              href={item.linkSite}
             >
               <div className="relative flex items-center justify-center w-[80vw] sm:w-[570px] overflow-hidden h-[30vh] sm:h-[40vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#131162d]">
