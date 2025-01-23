@@ -32,45 +32,6 @@ const Experience = () => {
           </Button>
         ))}
       </div>
-
-      <h1 className='heading my-5'>
-        My <span className="text-purple">Tech Stack</span>
-      </h1>
-
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-        {skills.slice(0, 5).map((company, index) => (
-          <Fragment key={index}>
-            <div className="flex gap-2 max-w-32 md:max-w-60">
-              <img
-                src={company.img}
-                alt={company.name}
-                className='w-8 md:w-12' />
-              {/* <img
-                                src={company.nameImg}
-                                alt={company.name}
-                                width={company.id === 4 || company.id === 5 ? 100 : 150}
-                                className='w-20 md:w-24' /> */}
-            </div>
-          </Fragment>
-        ))}
-      </div>
-      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-        {skills.slice(6, 11).map((company, index) => (
-          <Fragment key={index}>
-            <div className="flex gap-2 max-w-32 md:max-w-60 mt-4">
-              <img
-                src={company.img}
-                alt={company.name}
-                className='w-8 md:w-12' />
-              {/* <img
-                                src={company.nameImg}
-                                alt={company.name}
-                                width={company.id === 4 || company.id === 5 ? 100 : 150}
-                                className='w-20 md:w-24' /> */}
-            </div>
-          </Fragment>
-        ))}
-      </div>
     </section>
   );
 };

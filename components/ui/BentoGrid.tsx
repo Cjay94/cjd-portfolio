@@ -67,7 +67,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "cjephthah94@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -188,7 +188,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] !cursor-pointer"
               />
             </div>
           )}

@@ -1,9 +1,12 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+import { TbWorldWww } from "react-icons/tb";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import Link from "next/link";
+import { BackgroundBeams } from "./ui/Beams";
 
 const RecentProjects = () => {
   return (
@@ -50,17 +53,31 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex text-purple text-sm md:text-xs lg:text-xl">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className='ms-3 text-purple' />
+                <div className="flex gap-x-4">
+                  <div className="flex items-center">
+                    <Link
+                      href={item.link}
+                      target="_blank"
+                      title="View Live Site"
+                      className="flex">
+                      <TbWorldWww className="hover:text-purple text-white transition duration-500 w-8 lg:w-10 h-8 lg:h-10" />
+                    </Link>
+
+                  </div>
+                  <div className="flex items-center">
+                    <Link href={item.link} target="_blank" title="View Source Code" className="flex">
+                      <FaGithub className="hover:text-purple text-white transition duration-500 w-8 lg:w-10 h-8 lg:h-10" />
+                    </Link>
+
+                  </div>
+
                 </div>
               </div>
             </PinContainer>
           </div>
         ))}
       </div>
+      <BackgroundBeams />
     </section>
   )
 }
