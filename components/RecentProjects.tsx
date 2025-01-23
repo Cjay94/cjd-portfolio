@@ -56,7 +56,7 @@ const RecentProjects = () => {
                 <div className="flex gap-x-4">
                   <div className="flex items-center">
                     <Link
-                      href={item.link}
+                      href={item.linkSite}
                       target="_blank"
                       title="View Live Site"
                       className="flex">
@@ -65,7 +65,7 @@ const RecentProjects = () => {
 
                   </div>
                   <div className="flex items-center">
-                    <Link href={item.link} target="_blank" title="View Source Code" className="flex">
+                    <Link href={item.linkGH} target="_blank" title="View Source Code" className="flex">
                       <FaGithub className="hover:text-purple text-white transition duration-500 w-8 lg:w-10 h-8 lg:h-10" />
                     </Link>
 
