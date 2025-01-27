@@ -1,4 +1,5 @@
 import { withSentryConfig } from '@sentry/nextjs';
+
 /**
  * @type {import('next').NextConfig}
  */
@@ -8,9 +9,21 @@ const nextConfig = {
         // your project has ESLint errors.
         ignoreDuringBuilds: true,
     },
-}
+    reactStrictMode: true,
+    swcMinify: true,
+    images: {
+        domains: ['localhost'],
+    },
+    webpack: (config) => {
+        config.module.rules.push({
+            test: /\.(glsl|vs|fs|vert|frag)$/,
+            use: ['raw-loader', 'glslify-loader'],
+        });
+        return config;
+    },
+};
 
-export default withSentryConfig(nextConfig, {
+const sentryConfig = withSentryConfig(nextConfig, {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
@@ -19,9 +32,6 @@ export default withSentryConfig(nextConfig, {
 
     // Only print logs for uploading source maps in CI
     silent: true,
-
-    // For all available options, see:
-    // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
 
     // Upload a larger set of source maps for prettier stack traces (increases build time)
     widenClientFileUpload: true,
@@ -49,3 +59,5 @@ export default withSentryConfig(nextConfig, {
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
 });
+
+export default sentryConfig;

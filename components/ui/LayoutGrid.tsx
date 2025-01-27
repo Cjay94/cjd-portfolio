@@ -4,28 +4,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "./MovingBorders";
-
 type Card = {
   id: number;
   content: JSX.Element | React.ReactNode | string;
   className: string;
   thumbnail: string;
 };
-
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
-
   const handleClick = (card: Card) => {
     setLastSelected(selected);
     setSelected(card);
   };
-
   const handleOutsideClick = () => {
     setLastSelected(selected);
     setSelected(null);
   };
-
   return (
     // change md:grid-cols-3 to md:grid-cols-4, gap-4 to gap-10
     <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto gap-10 ">
@@ -55,8 +50,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 selected?.id === card.id
                   ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                   : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
+                    ? "z-40 bg-white rounded-xl h-full w-full"
+                    : "bg-white rounded-xl h-full w-full"
               )}
               layout
             >
@@ -77,7 +72,6 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     </div>
   );
 };
-
 const BlurImage = ({ card }: { card: Card }) => {
   const [loaded, setLoaded] = useState(false);
   return (
@@ -95,7 +89,6 @@ const BlurImage = ({ card }: { card: Card }) => {
     />
   );
 };
-
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
     <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">

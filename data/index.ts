@@ -29,7 +29,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My Tech Stack",
+    title: "My Skills",
     description: "I constantly try to improve",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -51,9 +51,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title:
-      "My passion lies in developing innovative web apps that tackle complex issues. From custom e-commerce solutions to cutting-edge web applications",
-    description: "",
+    title: "Currently working on a full-stack Banking Application.",
+    description: "Mansa Capital",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -296,10 +295,12 @@ export const socialMedia = [
   {
     id: 1,
     img: "/github.svg",
+    href: "https://github.com/",
   },
   {
     id: 2,
     img: "/link.svg",
+    href: "https://www.linkedin.com/",
   },
 ];
 
