@@ -48,7 +48,7 @@ const Hero = () => {
               />
             </a>
 
-            <a href="#">
+            <a href="/Chad_Jephthah_Resume.pdf">
               <MagicButton
                 title='CV / Resume'
                 icon={<IoDocumentTextOutline />}
